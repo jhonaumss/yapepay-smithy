@@ -7,12 +7,19 @@ namespace com.yapepay.api
 // ─────────────────────────────────────────────
 
 structure UserProfile {
-    @required userId: UUID
-    @required phoneNumber: PhoneNumber
-    @required @length(min: 2, max: 100) fullName: String
-    @required email: String
-    @required kycStatus: KycStatus
-    @required createdAt: Timestamp
+    @required
+    userId: UUID
+    @required
+    phoneNumber: PhoneNumber
+    @required
+    @length(min: 2, max: 100)
+    fullName: String
+    @required
+    email: String
+    @required
+    kycStatus: KycStatus
+    @required
+    createdAt: Timestamp
 }
 
 // ─────────────────────────────────────────────
@@ -47,8 +54,10 @@ structure UpdateCurrentUserInput {
 }
 
 structure UpdateUserPayload {
-    @length(min: 2, max: 100) fullName: String
-    @pattern("^[^@]+@[^@]+\\.[^@]+$") email: String
+    @length(min: 2, max: 100)
+    fullName: String
+    @pattern("^[^@]+@[^@]+\\.[^@]+$")
+    email: String
 }
 
 structure UpdateCurrentUserOutput {
