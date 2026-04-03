@@ -1,0 +1,14 @@
+{
+  "version": "1.0",
+  "sources": ["models"],
+  "projections": {
+    "openapi": {
+      "plugins": {
+        "openapi": {
+          "service": "com.yapepay.api#YapePayService",
+          "version": "3.0.2"
+        }
+      }
+    }
+  }
+}
