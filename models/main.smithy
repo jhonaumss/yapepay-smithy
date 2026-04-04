@@ -16,6 +16,9 @@ service YapePayService {
         RefreshTokenOperation
         GetCurrentUserOperation
         UpdateCurrentUserOperation
+        CreateTransactionOperation
+        ListTransactionsOperation
+        GetTransactionOperation
     ]
     errors: [UnauthorizedException, InternalServerException]
 }
