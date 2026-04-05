@@ -29,6 +29,7 @@ structure QRCode {
 
 /// Genera QR de cobro. amount=null → QR abierto (pagador ingresa monto).
 @http(method: "POST", uri: "/v1/qr", code: 201)
+@tags(["QR"])
 operation GenerateQROperation {
     input: GenerateQRInput
     output: GenerateQROutput
@@ -50,6 +51,7 @@ structure GenerateQROutput {
 /// Estado de un QR generado. Solo accesible por el propietario.
 @http(method: "GET", uri: "/v1/qr/{qrId}", code: 200)
 @readonly
+@tags(["QR"])
 operation GetQROperation {
     input: GetQRInput
     output: GetQROutput

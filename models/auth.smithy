@@ -13,6 +13,7 @@ use aws.protocols#restJson1
 /// El userId NUNCA va en el body — se devuelve en el JWT (claim sub).
 @http(method: "POST", uri: "/v1/auth/login", code: 200)
 @auth([])
+@tags(["Auth"])
 operation LoginOperation {
     input: LoginInput
     output: LoginOutput
@@ -22,6 +23,7 @@ operation LoginOperation {
 /// Renueva access_token. El refresh_token rota en cada llamada.
 @http(method: "POST", uri: "/v1/auth/refresh", code: 200)
 @auth([])
+@tags(["Auth"])
 operation RefreshTokenOperation {
     input: RefreshTokenInput
     output: RefreshTokenOutput

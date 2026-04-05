@@ -29,6 +29,7 @@ list TransactionList {
 
 /// Transferencia P2P. senderId del token (sub). Requiere idempotencyKey.
 @http(method: "POST", uri: "/v1/transacciones", code: 201)
+@tags(["Transacciones"])
 operation CreateTransactionOperation {
     input: CreateTransactionInput
     output: CreateTransactionOutput
@@ -66,6 +67,7 @@ structure CreateTransactionOutput {
 /// Historial paginado. userId del token — el usuario solo ve SUS transacciones.
 @http(method: "GET", uri: "/v1/transacciones", code: 200)
 @readonly
+@tags(["Transacciones"])
 @paginated(inputToken: "cursor", outputToken: "nextCursor", pageSize: "pageSize")
 operation ListTransactionsOperation {
     input: ListTransactionsInput
@@ -91,6 +93,7 @@ structure ListTransactionsOutput {
 /// Detalle de transacción. Solo accesible para remitente o receptor.
 @http(method: "GET", uri: "/v1/transacciones/{txId}", code: 200)
 @readonly
+@tags(["Transacciones"])
 operation GetTransactionOperation {
     input: GetTransactionInput
     output: GetTransactionOutput

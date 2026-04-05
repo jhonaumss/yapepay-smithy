@@ -22,6 +22,7 @@ structure Wallet {
 /// Saldo de la billetera. walletId resuelto desde userId del token.
 @http(method: "GET", uri: "/v1/billeteras/me", code: 200)
 @readonly
+@tags(["Billeteras"])
 operation GetMyWalletOperation {
     output: GetMyWalletOutput
     errors: [UnauthorizedException, ResourceNotFoundException]
