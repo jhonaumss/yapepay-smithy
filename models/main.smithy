@@ -19,6 +19,7 @@ service YapePayService {
         CreateTransactionOperation
         ListTransactionsOperation
         GetTransactionOperation
+        GetMyWalletOperation
     ]
     errors: [UnauthorizedException, InternalServerException]
 }
