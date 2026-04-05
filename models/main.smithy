@@ -18,6 +18,10 @@ service YapePayService {
         UpdateCurrentUserOperation
         GenerateQROperation
         CreateRechargeOperation
+        CreateTransactionOperation
+        ListTransactionsOperation
+        GetTransactionOperation
+        GetMyWalletOperation
     ]
     errors: [UnauthorizedException, InternalServerException]
 }
