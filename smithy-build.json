@@ -13,7 +13,9 @@
       "plugins": {
         "openapi": {
           "service": "com.yapepay.api#YapePayService",
-          "version": "3.0.2"
+          "version": "3.0.2",
+          "tags": true,
+          "supportedTags": ["Auth", "Usuarios", "Billeteras", "Transacciones", "Recargas", "QR"]
         }
       }
     }

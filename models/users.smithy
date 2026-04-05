@@ -29,6 +29,7 @@ structure UserProfile {
 /// Perfil del usuario autenticado. userId derivado del Bearer token.
 @http(method: "GET", uri: "/v1/usuarios/me", code: 200)
 @readonly
+@tags(["Usuarios"])
 operation GetCurrentUserOperation {
     output: GetCurrentUserOutput
     errors: [UnauthorizedException]
@@ -42,6 +43,7 @@ structure GetCurrentUserOutput {
 /// Actualiza perfil propio. userId del token, nunca del body.
 @idempotent
 @http(method: "PATCH", uri: "/v1/usuarios/me", code: 200)
+@tags(["Usuarios"])
 operation UpdateCurrentUserOperation {
     input: UpdateCurrentUserInput
     output: UpdateCurrentUserOutput

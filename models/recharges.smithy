@@ -8,6 +8,7 @@ namespace com.yapepay.api
 
 /// Recarga desde cuenta bancaria vinculada. Idempotente.
 @http(method: "POST", uri: "/v1/recargas", code: 201)
+@tags(["Recargas"])
 operation CreateRechargeOperation {
     input: CreateRechargeInput
     output: CreateRechargeOutput
@@ -39,22 +40,3 @@ structure CreateRechargeOutput {
     @range(min: 0, max: 3600)
     estimatedCreditSeconds: Integer
 }
-
-structure Transaction {
-    @required
-    id: UUID
-
-    @required
-    amount: Amount
-
-    @required
-    status: TransactionStatus
-
-    @required
-    createdAt: Timestamp
-
-    bankAccountId: UUID
-}
-
-
-
