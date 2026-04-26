@@ -1,13 +1,9 @@
 {
   "version": "1.0",
-  "sources": ["models"],
-  "maven": {
-    "dependencies": [
-      "software.amazon.smithy:smithy-aws-traits:1.49.0",
-      "software.amazon.smithy:smithy-openapi:1.49.0",
-      "software.amazon.smithy:smithy-aws-apigateway-openapi:1.49.0"
-    ]
-  },
+  "sources": [
+    "models"
+  ],
+
   "projections": {
     "openapi": {
       "plugins": {
@@ -15,7 +11,23 @@
           "service": "com.yapepay.api#YapePayService",
           "version": "3.0.2",
           "tags": true,
-          "supportedTags": ["Auth", "Usuarios", "Billeteras", "Transacciones", "Recargas", "QR"]
+          "supportedTags": [
+            "Auth",
+            "Usuarios",
+            "Billeteras",
+            "Transacciones",
+            "Recargas",
+            "QR"
+          ]
+        }
+      }
+    },
+    "typescript-ssdk": {
+      "plugins": {
+        "typescript-ssdk-codegen": {
+          "package": "@yapepay/service-ssdk",
+          "packageVersion": "0.0.1",
+          "disableDefaultValidation": true
         }
       }
     }
