@@ -17,6 +17,7 @@ service YapePayService {
         GetCurrentUserOperation
         UpdateCurrentUserOperation
         GenerateQROperation
+        GetQROperation
         CreateRechargeOperation
         CreateTransactionOperation
         ListTransactionsOperation

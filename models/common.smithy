@@ -13,8 +13,9 @@ string UUID
 @length(min: 9, max: 12)
 string PhoneNumber
 
-@range(min: 1, max: 999999)
-bigDecimal Amount
+@pattern("^\\d{1,15}\\.\\d{2}$")
+@length(min: 1, max: 20)
+string Amount
 
 @length(min: 3, max: 3)
 @pattern("^[A-Z]{3}$")
